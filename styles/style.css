@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family= Bebas +Neue & display=swap');
 
-@Tipo de letra {
+@font-face {
     font-family: 'Android';
     src: url(../fontes/idroid.otf) format('opentype');
-    peso da fonte: normal;
-    estilo da fonte: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 /*
 #c5ebd6
@@ -14,7 +14,7 @@
 #1a5c37
 #063d1e
 */
-:raiz {
+:root {
     --cor0: #c5ebd6;
     --cor1: #83e1ad;
     --cor2: #3ddc84;
@@ -23,216 +23,216 @@
     --cor5: #063d1e;
 
     --fonte-padrao: Arial, Verdana, Monospace;
-    --fonte-destaque:'Bebas Neue', cursiva;
-    --fonte-android: 'Android', cursiva;
+    --fonte-destaque:'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
   }
 
   *{
-    margem: 0px;
-    preenchimento: 0px;
+    margin: 0px;
+    padding: 0px;
   }
 
 
   
-corpo {
-    cor de fundo: #c5ebd6;
+body {
+    background-color: #e07c7cbe;
 }
 
-a.externo::após {
-    conteúdo: '\00A0\1F517';
+a.externo::after {
+    content: '\00A0\1F517';
 
 }
 
-cabeçalho {
-    cor de fundo: var(--cor4);
-    altura mínima: 150px;
+header {
+    background-color: var(--cor4);
+    min-height: 150px;
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
 
-cabeçalho > h1 {
-    cor branca;
+header > h1 {
+    color: white;
     font-family: var(--fonte-destaque);
-    alinhamento de texto: centro;
+    text-align: center;
     padding-top: 40px;
-    margem inferior: 20px;
-    tamanho da fonte: 3em;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0,562);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.562);
 }
 
-cabeçalho > p {
-    cor branca;
-    alinhamento de texto: centro;
+header > p {
+    color: white;
+    text-align: center;
     font-family: var(--fonte-padrao);
-    tamanho da fonte: 1em;
-    largura máxima: 500px;
+    font-size: 1em;
+    max-width: 500px;
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
-    margem: automática;
-    margem inferior: 20px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0,562);
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.562);
 }
 
-navegação {
+nav {
     font-family: var(--fonte-padrao);
-    cor de fundo: #063d1e05;
-    preenchimento: 7px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0,61);
+    background-color: #063d1e05;
+    padding: 7px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.61);
 }
 
-navegação > a {
-    cor: var(--cor1);
-    preenchimento: 10px;
-    decoração de texto: nenhum;
-    intensidade da fonte: Negrito;
-    raio da borda: 5px;
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 nav > a:hover {
-    cor de fundo: var(--cor3);
-    cor: var(--cor5);
-    duração da transição: 0,5s;
+    background-color: var(--cor3);
+    color: var(--cor5);
+    transition-duration: .5s;
 }
 
 
-principal {
-    cor de fundo: branco;
-    largura mínima: 300px;
-    largura máxima: 1000px;
-    margem: automática;
-    margem inferior: 30px;
-    preenchimento: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0,527);
-    borda-inferior-esquerda-raio: 10px;
-    raio inferior direito da borda: 10px;
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 div.video {
-    cor de fundo: var(--cor5);
-    margem: 0px -20px 30px;
-    preenchimento: 20px;
+    background-color: var(--cor5);
+    margin: 0px -20px 30px;
+    padding: 20px;
     padding-bottom: 56%;
-    posição: relativa;
+    position: relative;
 }
 
-div.vídeo > iframe {
-    posição: absoluta;
-    top 5%;
-    esquerda: 5%;
-    largura: 90%;
-    altura: 90%;
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
-p principal {
+main p {
     font-family: var(--fonte-padrao);
-    margem: 15px 0px;
-    alinhamento de texto: justifique;
-    recuo do texto: 30px;
-    altura da linha: 2em;
-    tamanho da fonte: 1em;
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
   }
 
-  principal forte {
-    intensidade da fonte: Negrito;
-    cor: var(--cor4);
+  main strong {
+    font-weight: bold;
+    color: var(--cor4);
   }
 
-principal um {
-    decoração de texto: nenhum;
-    intensidade da fonte: Negrito;
-    cor: var(--cor5);
-    cor de fundo: var(--cor1);
-    preenchimento: 2px 6px;
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
 }
 
-principal a:hover {
-    decoração de texto: sublinhado;
-    cor: var(--cor4);
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
 }
 
-imagem principal {
-    largura: 100%;
+main img {
+    width: 100%;
 }
 
-principal h1 {
-    cor: var(--cor5);
-    tamanho da fonte: 1,8em;
-    peso da fonte: normal;
+main h1 {
+    color: var(--cor5);
+    font-size: 1.8em;
+    font-weight: normal;
 }
 
-principal h1, h2 {
+main h1, h2 {
     font-family: var(--fonte-android);
 }
 
-principal h2 {
-    cor: var(--cor4);
-    tamanho da fonte: 1,3em;
-    background-image: linear-gradient(para a direita, var(--cor1), transparent);
-    recuo do texto: 10px;
-    peso da fonte: normal;
+main h2 {
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 10px;
+    font-weight: normal;
 }
 
 .pequena {
-    largura máxima: 350px;
-    exibição: bloco;
-    margem: automática;
+    max-width: 350px;
+    display: block;
+    margin: auto;
 }
 
-aparte {
+aside  {
     font-family: var(--fonte-padrao);
-    cor de fundo: var(--cor1);
-    preenchimento: 10px;
-    raio da borda: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0,280);
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.280);
 }
 
-lado > h3 {
-    cor de fundo: var(--cor4);
-    cor branca;
-    preenchimento: 10px;
-    margem: -10px -10px 0px -10px;
-    raio da borda: 10px 10px 0px 0px;
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
-lado > ul {
-    tipo de estilo de lista: '\2714\00A0\00A0';
-    posição de estilo de lista: dentro;
-    colunas: 2;
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
 }
 
 
-rodapé {
+footer {
     font-family: var(--fonte-padrao);
-    cor de fundo: var(--cor5);
-    cor branca;
-    alinhamento de texto: centro;
-    tamanho da fonte: 0,8em;
-    preenchimento: 5px;
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
 }
 
-rodapé a {
-    cor branca;
-    cor de fundo: var(--cor4);
-    peso da fonte: mais ousado;
-    decoração de texto: nenhum;
-    preenchimento: 5px;
+footer a {
+    color: white;
+    background-color: var(--cor4);
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 5px;
 }
 
-rodapé a:hover {
-    decoração de texto: sublinhado;
-    cor de fundo: var(--cor3);
-    cor: var(--cor5);
+footer a:hover {
+    text-decoration: underline;
+    background-color: var(--cor3);
+    color: var(--cor5);
 }
 
 /*
-mm mm
-mm   mm mm
-mmmm mmmm
-mm mm mm mm
-mm mm mm
-mm mm mm
-mm mm
-mm mm
-mm mm
-mm mm
+mm                  mm
+mmm                mmm
+mmmm              mmmm
+mm    mm       mm   mm
+mm        mmm       mm
+mm         m        mm
+mm                  mm
+mm                  mm
+mm                  mm
+mm                  mm
 */
